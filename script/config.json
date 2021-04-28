@@ -1,0 +1,284 @@
+[{
+	"id": "jd_jxd_xcl",
+	"cron": "0 30 8 * * * *",
+	"url": "http://tyh52.com/jxjs/jxd.js",
+	"name": "京小兑"
+},  {
+	"id": "jd_lotteryMachine_xcl",
+	"cron": "0 11 1 * * * *",
+	"url": "http://tyh52.com/jd/script/jd_lotteryMachine.js",
+	"name": "京东抽奖机"
+}, {
+	"id": "jd_shake_xcl",
+	"cron": "0 0 0 * * * *",
+	"url": "http://tyh52.com/jd/script/jd_shake.js",
+	"name": "超级摇一摇"
+}, {
+	"id": "jd_try_xcl",
+	"cron": "0 30 9 * * * *",
+	"url": "https://tyh52.com/jd/script/jd_try.js",
+	"name": "京东试用"
+}, {
+	"id": "jd_pigPet_lxk0301",
+	"cron": "0 0 9 * * * *",
+	"url": "https://tyh52.com/jd/script/jd_pigPet.js",
+	"name": "京东金融养猪猪"
+}, {
+	"id": "jd_jdfactory_lxk0301",
+	"cron": "0 10 * * * * *",
+	"url": "https://tyh52.com/jd/script/jd_jdfactory.js",
+	"name": "东东工厂"
+}, {
+	"id": "jd_dtqd_xcl",
+	"cron": "0 10 8 * * * *",
+	"url": "https://tyh52.com/jd/script/jd_dtqd.js",
+	"name": "店铺签到"
+}, {
+	"id": "jd_club_lottery_xcl",
+	"cron": "0 5 0,23 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_club_lottery.js",
+	"name": "摇京豆"
+}, {
+	"id": "jd_superMarket_xcl",
+	"cron": "0 11 * * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_superMarket.js",
+	"name": "京东超市"
+}, {
+	"id": "jd_blueCoin_xcl",
+	"cron": "55 59 23 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_blueCoin.js",
+	"name": "京小超兑换奖品"
+}, {
+	"id": "jd_live_redrain_xcl",
+	"cron": "0 0,1,30,31 20-23/1 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_live_redrain.js",
+	"name": "超级直播间红包雨"
+}, {
+	"id": "jx_nc_xcl",
+	"cron": "0 0 9,12,18 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_jxnc.js",
+	"name": "京喜农场"
+}, {
+	"id": "jd_daily_egg_xcl",
+	"cron": "0 10 * * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_daily_egg.js",
+	"name": "天天提鹅"
+}, {
+	"id": "jd_joy_xcl",
+	"cron": "0 15 0-23/2 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_joy.js",
+	"name": "宠汪汪"
+}, {
+	"id": "jd_pet_xcl",
+	"cron": "0 15 6-18/6 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_pet.js",
+	"name": "东东萌宠"
+}, {
+	"id": "jd_dreamFactory_xcl",
+	"cron": "0 10 * * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_dreamFactory.js",
+	"name": "京喜工厂"
+}, {
+	"id": "jd_moneyTree_xcl",
+	"cron": "0 3 * * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_moneyTree.js",
+	"name": "京东摇钱树"
+}, {
+	"id": "jd_z_xmf_xcl",
+	"cron": "0 10 10 7-9 4 * *",
+	"url": "https://tyh52.com/jd/jdresource/z_xmf.js",
+	"name": "小魔方"
+}, {
+	"id": "jd_mohe_xcl",
+	"cron": "0 0 0,1-23/3 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_mohe.js",
+	"name": "5G超级盲盒"
+}, {
+	"id": "jd_syj_xcl",
+	"cron": "0 10 7,12 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_syj.js",
+	"name": "赚京豆"
+}, {
+	"id": "jd_redPacket_xcl",
+	"cron": "0 1 1,2,23 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_redPacket.js",
+	"name": "京东全民开红包"
+}, {
+	"id": "jd_nzmh_xcl",
+	"cron": "0 0 8 * 4 * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_nzmh.js",
+	"name": "女装盲盒"
+}, {
+	"id": "monk_pasture_xcl",
+	"cron": "0 0,30 * 1-31 4-7 * *",
+	"url": "https://tyh52.com/jd/jdresource/monk_pasture.js",
+	"name": "有机牧场"
+}, {
+	"id": "jd_crazy_joy_xcl",
+	"cron": "0 10 7 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_crazy_joy.js",
+	"name": "疯狂的joy(任务)"
+}, {
+	"id": "jd_crazy_joy_coin_xcl",
+	"cron": "10 * * * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_crazy_joy_coin.js",
+	"name": "疯狂的joy(挂机)"
+}, {
+	"id": "jd_speed_red_xcl",
+	"cron": "0 0 0 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_speed_red.js",
+	"name": "极速版领红包"
+}, {
+	"id": "jd_z_asus_iqiyi_xcl",
+	"cron": "0 0 0 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_z_asus_iqiyi.js",
+	"name": "华硕-爱奇艺"
+}, {
+	"id": "jd_shop_xcl",
+	"cron": "0 10 0 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_shop.js",
+	"name": "进店领豆"
+}, {
+	"id": "jd_ms_xcl",
+	"cron": "0 10 7 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_ms.js",
+	"name": "京东秒秒币"
+}, {
+	"id": "jd_speed_sign_xcl",
+	"cron": "0 0 7 * * * *",
+	"url": "https://tyh52.com/jd/jdresource/jd_speed_sign.js",
+	"name": "极速版签到赚金币"
+}, {
+	"id": "jd_bean_sign_xcl",
+	"cron": "0 20 0 * * * *",
+	"describe":"一键签到系列，每天运行一次，默认定时0点20分执行",
+	"url": "https://tyh52.com/jd/jdresource/jd_bean_sign.js",
+	"name": "京东一键签到"
+}, {
+	"id": "jd_necklace_xcl",
+	"cron": "0 10 0,20 * * * *",
+	"describe":"点点券，可以兑换无门槛红包（1元，5元，10元，100元，部分红包需抢购）",
+	"url": "https://tyh52.com/jd/jdresource/jd_necklace.js",
+	"name": "点点券"
+}, {
+	"id": "jd_price_xcl",
+	"cron": "0 5 0 * * * *",
+	"describe":"60天内的订单进行保价",
+	"url": "https://tyh52.com/jd/jdresource/jd_price.js",
+	"name": "京东价格保护"
+}, {
+	"id": "jd_plantBean_xcl",
+	"cron": "0 1 7-21/2 * * * *",
+	"describe":"会自动关注任务中的店铺跟商品，介意者勿使用",
+	"url": "https://tyh52.com/jd/jdresource/jd_plantBean.js",
+	"name": "种豆得豆"
+},{
+	"id": "jd_cash_exchange_xcl",
+	"cron": "55 59 23 * * * *",
+	"describe":" 红包的有效期只有3天（72小时）",
+	"url": "https://tyh52.com/jd/jdresource/jd_cash_exchange.js",
+	"name": "领现金兑红包10"
+},{
+	"id": "jd_jdzz_xcl",
+	"cron": "0 10 0 * * * *",
+	"describe":"长期活动，每日收益2毛左右，多号互助会较多",
+	"url": "https://tyh52.com/jd/jdresource/jd_jdzz.js",
+	"name": "京东赚赚"
+},{
+	"id": "jx_sign_xcl",
+	"cron": "0 5 0 * * * *",
+	"describe":"京喜签到",
+	"url": "https://tyh52.com/jd/jdresource/jx_sign.js",
+	"name": "京喜签到"
+},{
+	"id": "xiaomistep_xcl",
+	"cron": "0 0 8 * * * *",
+	"isConcurrent":false,
+	"describe":"小米运动刷步数，可领赚京豆的75豆",
+	"url": "https://tyh52.com/jd/jdresource/xiaomistep.js",
+	"name": "小米运动刷步数"
+},{
+	"id": "jx_cfd_xcl",
+	"cron": "0 5 0,8,13,19 * * * *",
+	"describe":"京喜APP-我的-京喜财富岛",
+	"url": "https://tyh52.com/jd/jdresource/jx_cfd.js",
+	"name": "京喜财富岛"
+},{
+	"id": "jd_ddaixiaochu_xcl",
+	"cron": "0 5 8 * * * *",
+	"describe":"东东爱消除,更新到400关",
+	"url": "https://tyh52.com/jd/jdresource/jd_ddaixiaochu.js",
+	"name": "东东爱消除"
+},{
+	"id": "z_mother_jump_xcl",
+	"cron": "0 5 8,14,20 6-13 4 * *",
+	"describe":"活动入口: 首页-母婴馆-跳一跳",
+	"url": "https://tyh52.com/jd/jdresource/z_mother_jump.js",
+	"name": "母婴跳一跳"
+},{
+	"id": "jd_joy_reward_xcl",
+	"cron": "55 59 23,7,15 * * * *",
+	"describe":"宠汪汪兑京豆",
+	"url": "https://tyh52.com/jd/jdresource/jd_joy_reward.js",
+	"name": "宠汪汪兑京豆"
+},{
+	"id": "jd_fruit_xcl",
+	"cron": "0 5 6-18/6 * * * *",
+	"describe":"一天只能帮助4个人。多出的助力码无效",
+	"url": "https://tyh52.com/jd/jdresource/jd_fruit.js",
+	"name": "东东农场"
+},{
+	"id": "jd_live_lottery_social_xcl",
+	"cron": "0 10 0-23/6 * * * *",
+	"describe":"直播间抽奖(全局)",
+	"url": "https://tyh52.com/jd/jdresource/jd_live_lottery_social.js",
+	"name": "直播间抽奖(全局)"
+},{
+	"id": "jd_rankingList_xcl",
+	"cron": "0 11 9 * * * *",
+	"describe":"京东排行榜",
+	"url": "https://tyh52.com/jd/jdresource/jd_rankingList.js",
+	"name": "京东排行榜"
+},{
+	"id": "jd_shop_follow_xcl",
+	"cron": "0 0 12 * * * *",
+	"describe":"店铺关注有礼，需要pc端ck才能使用",
+	"url": "https://tyh52.com/jd/jdresource/jd_shop_follow.js",
+	"name": "店铺关注"
+},{
+	"id": "jd_unsubscribe_xcl",
+	"cron": "0 0 8 * * * *",
+	"describe":"店铺批量取消关注，建议定时在试用之前",
+	"url": "https://tyh52.com/jd/jdresource/jd_unsubscribe.js",
+	"name": "店铺取消关注"
+},{
+	"id": "jd_health_area_xcl",
+	"cron": "0 10 0-23/4 * * * *",
+	"describe":"京东APP首页搜索 \"玩一玩\"即可",
+	"url": "https://tyh52.com/jd/jdresource/jd_health_area.js",
+	"name": "东东健康社区"
+},{
+	"id": "jd_health_area_coin_xcl",
+	"cron": "0 0,30 * * * * *",
+	"describe":"东东健康社区挂机攒能量",
+	"url": "https://tyh52.com/jd/jdresource/jd_health_area_coin.js",
+	"name": "健康社区挂机"
+},{
+	"id": "jd_market_lottery_xcl",
+	"cron": "0 4 10 * * * *",
+	"describe":"幸运大转盘 活动地址：https://pro.m.jd.com/mall/active/3ryu78eKuLyY5YipWWVSeRQEpLQP/index.html",
+	"url": "https://tyh52.com/jd/jdresource/jd_market_lottery.js",
+	"name": "幸运大转盘"
+},{
+	"id": "jd_super_redrain_xcl",
+	"cron": "0 1 0-23/1 * * * *",
+	"describe":"整点京豆雨",
+	"url": "https://tyh52.com/jd/jdresource/jd_super_redrain.js",
+	"name": "整点京豆雨"
+},{
+	"id": "jd_tcl_xcl",
+	"cron": "0 10 1 * * * *",
+	"describe":"球队赢好礼,默认：不加购物车，不注册店铺会员卡。",
+	"url": "https://tyh52.com/jd/jdresource/jd_tcl.js",
+	"name": "球队赢好礼"
+}]
