@@ -281,4 +281,10 @@
 	"describe":"球队赢好礼,默认：不加购物车，不注册店铺会员卡。",
 	"url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_tcl.js",
 	"name": "球队赢好礼"
+},{
+	"id": "jd_jin_tie_xcl",
+	"cron": "0 10 0 * * * *",
+	"describe":"领金贴(只做签到以及互助任务里面的部分任务)",
+	"url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_jin_tie.js",
+	"name": "领金贴"
 }]
