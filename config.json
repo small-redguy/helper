@@ -287,4 +287,16 @@
 	"describe":"领金贴(只做签到以及互助任务里面的部分任务)",
 	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_jin_tie.js",
 	"name": "领金贴"
+},{
+	"id": "tanmiwuxianxingqiu",
+	"cron": "0 15 8 9-13 5 * *",
+	"describe":"活动地址：京东app-搜索 探秘无限星空",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/tanmiwuxianxingqiu.js",
+	"name": "探秘无限星空"
+},{
+	"id": "jd_ckwlq",
+	"cron": "0 25 8,12 6-11 5 * *",
+	"describe":"活动地址：京东 oppo自营旗舰店",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_ckwlq.js",
+	"name": "刺客567寻宝"
 }]
