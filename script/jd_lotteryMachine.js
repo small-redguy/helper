@@ -2,10 +2,11 @@ const STRSPLIT = "|";
 const needSum = false;            //是否需要显示汇总
 const printDetail = false;        //是否显示出参详情
 
-const appIdArr = ['1EFRRxA','1EFRQwA','1EFRTyg','1EFRXxg','1EFRWyg','1EFRWyw','1EFRZwA','1EFRZwQ','1EFRYwA','1EFRYxw']
-const homeDataFunPrefixArr = ['interact_template','interact_template','','','','','','','','','','','','','','','','interact_template','interact_template','']
-const collectScoreFunPrefixArr = ['','','','','','','','','','','','','','','','','','interact_template','interact_template','']
-const lotteryResultFunPrefixArr = ['','','','','','','','','','','','','','','','','','','interact_template','interact_template','interact_template']
+
+const appIdArr = ['1EFRRxA','1EFRQwA','1EFRTyg','1EFRXxg','1EFVRww','1EFRYxA','1EFRZwA','1EFRZwQ','1EFRYwA']
+const homeDataFunPrefixArr = ['interact_template','interact_template','','','','','','','','','','','','','','','','interact_template','interact_template']
+const collectScoreFunPrefixArr = ['','','','','','','','','','','','','','','','','','interact_template','interact_template']
+const lotteryResultFunPrefixArr = ['','','','','','interact_template','','','','','','','','','','','','','interact_template','interact_template']
 
 let merge = {}
 //IOS等用户直接用NobyDa的jd cookie
