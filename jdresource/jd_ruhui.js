@@ -18,7 +18,7 @@ const sck = $.isNode() ? "set-cookie" : "Set-Cookie";
 let cookiesArr = [],
 	cookie = "",
 	message;
-let minPrize = 10;
+let minPrize = 10;//设置最小奖励入会京豆值，入会奖励小于这个值的时候，不自动入会
 
 if ($.isNode()) {
 	Object.keys(jdCookieNode).forEach((item) => {
