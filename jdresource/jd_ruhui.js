@@ -275,7 +275,7 @@ function jsonParse(str) {
 function readShopId() {
 	return new Promise((resolve) => {
 		$.get({
-			url: 'http://tyh52.com/jd/static/ydShopId.txt'
+			url: 'https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/static/ydShopId.txt'
 		}, (err, resp, data) => {
 			try {
 				$.shopIds = [];
