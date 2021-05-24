@@ -40,11 +40,11 @@ async function main() {
 				await city_lotteryAward();
 			}
 			$.isdui=true;
-			var count=0;
-			while($.isdui==true&&count<30){
-			    count ++ ;
-			    await city_withdraw();
-			}
+// 			var count=0;
+// 			while($.isdui==true&&count<30){
+// 			    count ++ ;
+// 			    await city_withdraw();
+// 			}
 			
 		}
 	})()
