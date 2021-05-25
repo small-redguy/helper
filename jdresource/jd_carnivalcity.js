@@ -95,8 +95,8 @@ let nowTime = new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8*
         }
       }
       if ($.canHelp) {
-        that.log(`\n\n如果有剩余助力机会，则给作者lxk0301以及随机码助力`)
-        await doHelp();
+        //that.log(`\n\n如果有剩余助力机会，则给作者lxk0301以及随机码助力`)
+        //await doHelp();
       }
     }
   }
