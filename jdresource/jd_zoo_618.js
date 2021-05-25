@@ -646,7 +646,7 @@ function zoo_getHomeData(inviteId= "",timeout = 0) {
             //that.log('zoo_getHomeData:' + JSON.stringify(data))
             secretp = data.data.result.homeMainInfo.secretp
             await zoo_collectProduceScore();
-            await zoo_pk_getHomeData('sSKNX-MpqKPR4M9sER0OjqZ7MpK2-RQ_CxCKTbBOhmKInSJukww_AlA')
+            await zoo_pk_getHomeData('sSKNX-MpqKPR4M9sER0OjqZ7MpK2-RQ_CxCKTbBOhmKInSJukww_AlE')
             //await zoo_pk_assistGroup()
             if (data.data.result.homeMainInfo.raiseInfo.buttonStatus === 1 ) await zoo_raise(1000)
             await zoo_getHomeData('ZXTKT018vPkIlJafIt5I9ZJBlwFjRWn6-7zx55awQ');
