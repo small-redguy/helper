@@ -1,4 +1,5 @@
 
+				
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 //IOS等用户直接用NobyDa的jd cookie
@@ -43,7 +44,7 @@ const JD_API_HOST = `https://api.m.jd.com/client.action?functionId=`;
       that.log('\n\n京东账号：'+merge.nickname + ' 任务开始')
       await zoo_pk_getHomeData();
       await zoo_getHomeData();
-      //await qryCompositeMaterials()
+      await qryCompositeMaterials()
       await msgShow();
       //break;
     }
@@ -590,7 +591,7 @@ function zoo_pk_assistGroup(inviteId = "",timeout = 0) {
       //that.log(url.body)
       $.post(url, async (err, resp, data) => {
         try {
-          //that.log('商圈助力：' + data)
+         // that.log('商圈助力：' + data)
           data = JSON.parse(data);
         } catch (e) {
           $.logErr(e, resp);
@@ -764,6 +765,13 @@ function zoo_raise(timeout = 0) {
 function qryCompositeMaterials(timeout = 0) {
   return new Promise((resolve) => {
     setTimeout( ()=>{
+        let bodys = {
+			"qryParam": "[{\"type\":\"advertGroup\",\"id\":\"05382925\",\"mapTo\":\"singlePullDowner\"},{\"type\":\"advertGroup\",\"id\":\"05377177\",\"mapTo\":\"singleTitleBrand\"},{\"type\":\"advertGroup\",\"id\":\"05382858\",\"mapTo\":\"singleBtnDraw\"},{\"type\":\"advertGroup\",\"id\":\"05376054\",\"mapTo\":\"singleBubbles\"},{\"type\":\"advertGroup\",\"id\":\"05372304\",\"mapTo\":\"singleBtnPk\"},{\"type\":\"advertGroup\",\"id\":\"05373459\",\"mapTo\":\"singleBtnMainDivided\"},{\"type\":\"advertGroup\",\"id\":\"05373345\",\"mapTo\":\"singleBtnNotTask\"},{\"type\":\"advertGroup\",\"id\":\"05377769\",\"mapTo\":\"zipper\"}]",
+			"activityId": "2s7hhSTbhMgxpGoa9JDnbDzJTaBB",
+			"pageId": "",
+			"reqSrc": "",
+			"applyKey": "jd_star"
+		}
       let url = {
         url : `${JD_API_HOST}qryCompositeMaterials`  ,
         headers : {
@@ -777,17 +785,28 @@ function qryCompositeMaterials(timeout = 0) {
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`
         },
-        body : `functionId=qryCompositeMaterials&body={"qryParam":"[{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"viewLogo\\",\\"id\\":\\"05149412\\"},{\\"type\\":\\"advertGroup\\",\\"mapTo\\":\\"bottomLogo\\",\\"id\\":\\"05149413\\"}]","activityId":"2cKMj86srRdhgWcKonfExzK4ZMBy","pageId":"","reqSrc":"","applyKey":"21beast"}&client=wh5&clientVersion=1.0.0`
+        body : `functionId=qryCompositeMaterials&body=${JSON.parse(bodys)}&client=wh5&clientVersion=1.0.0`
       }
       $.post(url, async (err, resp, data) => {
         try {
           //that.log(data)
           data = JSON.parse(data);
-          for (let i in data.data.viewLogo.list) {
-            await zoo_getTaskDetail(data.data.viewLogo.list[i].desc)
-          }
-          for (let i in data.data.bottomLogo.list) {
-            await zoo_getTaskDetail(data.data.bottomLogo.list[i].desc)
+          let obj=data.data;
+          if(obj){
+              for(let key in obj){
+                let list=obj[key].list;
+                if (list) {
+								for (var j = 0; j < list.length; j++) {
+								    let sitem = list[j];
+									if (sitem) {
+										if(sitem.link){
+											 await zoo_getTaskDetail(sitem.link)
+										}
+									}
+								    
+								}
+							}
+              }
           }
         } catch (e) {
           $.logErr(e, resp);
@@ -819,23 +838,36 @@ function zoo_pk_getHomeData(body = "",timeout = 0) {
       }
       $.post(url, async (err, resp, data) => {
         try {
-        //   if (body !== "") {
-        //     await $.getScript("https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/memo/jd_zooShareCode.txt").then((text) => (shareCodeList = text.split('\n')))
-        //     for (let i in shareCodeList) {
-        //       if (shareCodeList[i]) await zoo_pk_assistGroup(shareCodeList[i]);
-        //     }
-        //     //await zoo_pk_assistGroup(body);
-        //   } else {
-        // that.log(data);
-        data = JSON.parse(data);
-          
-          that.log('您的商圈助力码：' + data.data.result.groupInfo.groupAssistInviteId)
-        //   }
-        } catch (e) {
-          $.logErr(e, resp);
-        } finally {
-          resolve()
-        }
+					if (body !== "") {
+						try {
+							$.get({
+								url: "https://tyh52.com/js/client.php"
+							}, (err, resp, res) => {
+								res=JSON.parse(res);
+								if(res.pk){
+									let list=res.pk;
+									for(var item in list){
+										if(item){
+											zoo_pk_assistGroup(item);
+										}
+									}
+								}
+							})
+						} catch (er) {
+						}
+						await zoo_pk_assistGroup(body);
+					} else {
+				// 		that.log(data);
+						data = JSON.parse(data);
+
+						that.log('您的商圈助力码：' + data.data.result.groupInfo
+							.groupAssistInviteId)
+					}
+				} catch (e) {
+					$.logErr(e, resp);
+				} finally {
+					resolve()
+				}
       })
     },timeout)
   })
