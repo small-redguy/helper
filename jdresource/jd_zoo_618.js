@@ -846,7 +846,7 @@ function zoo_pk_getHomeData(body = "",timeout = 0) {
 								res=JSON.parse(res);
 								if(res.pk){
 									let list=res.pk;
-									for(var item in list){
+									for(var item of list){
 										if(item){
 											zoo_pk_assistGroup(item);
 										}
