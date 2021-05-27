@@ -347,8 +347,8 @@ async function zoo() {
 		let skillList = $.pkHomeData.result.groupInfo.skillList || [];
 		$.doSkillFlag = true;
 		//activityStatus === 1未开始，2 已开始
-		for (let i = 0; i < skillList.length && $.pkHomeData.result.activityStatus === 2 && $.stopKill ==
-			false; i++) {
+		for (let i = 0; i < skillList.length && $.pkHomeData.result.activityStatus === 2 && $.doSkillFlag ==
+			true; i++) {
 			if (Number(skillList[i].num) > 0) {
 				$.skillCode = skillList[i].code;
 				for (let j = 0; j < Number(skillList[i].num) && $.doSkillFlag == true; j++) {
