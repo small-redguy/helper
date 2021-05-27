@@ -351,7 +351,7 @@ async function zoo() {
 			false; i++) {
 			if (Number(skillList[i].num) > 0) {
 				$.skillCode = skillList[i].code;
-				for (let j = 0; j < Number(skillList[i].num) && $.doSkillFlag == false; j++) {
+				for (let j = 0; j < Number(skillList[i].num) && $.doSkillFlag == true; j++) {
 					that.log(`使用技能`);
 					await takePostRequest('zoo_pk_doPkSkill');
 					await $.wait(2000);
