@@ -166,7 +166,7 @@ $.linkIds=["AkOULcXbUA_8EAPbYLLMgg"];
 				"businessSource": "SPRING_FESTIVAL_RED_ENVELOPE",
 				"base": {
 					"id": item.id,
-					"business": "",
+					"business": null,
 					"poolBaseId": item.poolBaseId,
 					"prizeGroupId": item.prizeGroupId,
 					"prizeBaseId": item.prizeBaseId,
@@ -223,7 +223,7 @@ $.linkIds=["AkOULcXbUA_8EAPbYLLMgg"];
 				'Host': 'api.m.jd.com',
 				'Connection': 'keep-alive',
 				'Content-Type': 'application/x-www-form-urlencoded',
-				'Referer': 'https://prodev.m.jd.com/jdlite/active/31U4T6S4PbcK83HyLPioeCWrD63j/index.html?channel=qqh5fx&inviter=UhBiP5ZPaM28-O0MOaGu2g&utm_user=plusmember&ad_od=share&cu=true&utm_source=kong&utm_medium=jingfen&utm_campaign=t_1000217905_&utm_term=2555319d90df4c66b502437958986790',
+				'Referer': 'https://prodev.m.jd.com/jdlite/active/q1eB6WUB8oC4eH1BsCLWvQakVsX/index.html',
 				'User-Agent': "jdltapp;android;3.1.0;9;",
 				'Accept-Language': 'zh-cn',
 			}
