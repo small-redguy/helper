@@ -163,7 +163,7 @@ function open(functionid, type) {
                         that.log("当前红包：" + data.data.rewardValue + "翻倍次数：" + data.data.changeTimes)
                     } else {
                         $.canDraw = false
-                        that.log(res.data)
+                        that.log(data)
                         $.message += "  翻倍失败😅\n"
                     }
                 }
