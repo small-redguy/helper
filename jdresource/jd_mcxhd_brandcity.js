@@ -3,6 +3,7 @@
 https://t.me/wenmouxx
 抄自 @yangtingxiao 抽奖机脚本
 活动入口：
+更新地址：https://cdn.jsdelivr.net/gh/Wenmoux/scripts/js/jd_mcxhd_brandcity.js
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
@@ -29,7 +30,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 let merge = {}
 let codeList = []
 //IOS等用户直接用NobyDa的jd cookie
-let cookiesArr = [],
+let cookiesArr = [],message,j,k,taskToken,l,g,gift,
     cookie = '';
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
@@ -66,9 +67,6 @@ const JD_API_HOST = `https://api.m.jd.com/client.action`;
                     "open-url": "https://bean.m.jd.com/bean/signIndex.action"
                 });
 
-                if ($.isNode()) {
-                    await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
-                }
                 continue
             }
 
@@ -130,7 +128,6 @@ const JD_API_HOST = `https://api.m.jd.com/client.action`;
 
         }
     }
-    await notify.sendNotify(`新潮品牌狂欢`, `${message}`);
 })()
 .catch((e) => $.logErr(e))
     .finally(() => $.done())
