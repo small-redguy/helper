@@ -89,7 +89,7 @@ function zoo_getTaskDetail(shopSign = "",appSign = "",timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -178,7 +178,7 @@ function zoo_myMap(timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -217,7 +217,7 @@ function zoo_pk_doPkSkill(skillType, timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -254,7 +254,7 @@ function zoo_sign(timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -296,7 +296,7 @@ function zoo_shopSignInWrite(shopSign,timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`
         },
@@ -334,7 +334,7 @@ function zoo_shopSignInRead(shopSign,timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`
         },
@@ -372,7 +372,7 @@ function zoo_collectProduceScore(timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
           'Content-Type' : `application/x-www-form-urlencoded`
@@ -412,7 +412,7 @@ function zoo_collectScore(taskBody,timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -462,7 +462,7 @@ function zoo_doAdditionalTask(taskBody,timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -503,7 +503,7 @@ function zoo_getFeedDetail(taskId,timeout = 0){
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -553,7 +553,7 @@ function qryViewkitCallbackResult(taskBody,timeout = 0) {
           'Connection' : `keep-alive`,
           'Accept' : `*/*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
           'Content-Type' : 'application/x-www-form-urlencoded',
@@ -624,7 +624,7 @@ function zoo_getHomeData(inviteId= "",timeout = 0) {
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -679,7 +679,7 @@ function collectFriendRecordColor(timeout = 0) {
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -711,7 +711,7 @@ function getEncryptedPinColor(timeout = 0) {
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -743,7 +743,7 @@ function zoo_raise(timeout = 0) {
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -776,7 +776,7 @@ function qryCompositeMaterials(timeout = 0) {
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
@@ -814,7 +814,7 @@ function zoo_pk_getHomeData(inviteId = "",timeout = 0) {
           'Connection' : `keep-alive`,
           'Accept' : `application/json, text/plain, */*`,
           'Host' : `api.m.jd.com`,
-          'User-Agent' : `jdapp;iPhone;9.2.0;14.1;`,
+          'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.5(0x18000528) NetType/WIFI Language/zh_CN`,
           'Accept-Encoding' : `gzip, deflate, br`,
           'Accept-Language' : `zh-cn`,
            'Content-Type' : `application/x-www-form-urlencoded`
