@@ -1,12 +1,11 @@
 const STRSPLIT = "|";
 const needSum = false;            //是否需要显示汇总
 const printDetail = false;        //是否显示出参详情
-const appIdArr = ['1EFRRxA','1EFRQwA','1EFRYxQ','1EFRXxg','1EFVRwA','1EFVRxw','1EFRZwA','1EFRZwQ','1EFRYwA','1EFVRxg','1EFVRxQ']
-//const shareCodeArr = ['P04z54XCjVWmIaW5m9cZ2f433tIlJz4FjX2kfk','P04z54XCjVXnIaW5m9cZ2f433tIlLKXiUijZw4','T0225KkcRx4b8lbWJU72wvZZcwCjVXn627yx55awQ','T0225KkcRx4b8lbWJU72wvZZcwCjVQmoaT5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjRWnIaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjRWm4aW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVenIaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVenYaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVfnIaW5kRrbA','','T0225KkcRx4b8lbWJU72wvZZcwCjRWmYaW5kRrbA']
-const homeDataFunPrefixArr = ['interact_template','interact_template','harmony_template','','','','','','','','','','','','','','','interact_template','interact_template']
-const collectScoreFunPrefixArr = ['','','','','','','','','','','','','','','','','','interact_template','interact_template']
-const lotteryResultFunPrefixArr = ['','','','','','','','','','','','','','','','','','','interact_template','interact_template']
-
+const appIdArr = ['1EFRRxA','1EFRQwA','1EFRYxQ','1EFRXxg','1EFVRxg','1EFVQwQ']
+//const shareCodeArr = ['T0225KkcRx4b8lbWJU72wvZZcwCjVWmIaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVXnIaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVQmoaT5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVQmoaT5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjRXnYaU5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjRXnYaU5kRrbA']
+const homeDataFunPrefixArr = ['interact_template','interact_template','harmony_template','','','','','','','','','','interact_template','interact_template']
+const collectScoreFunPrefixArr = ['','','','','','','','','','','','','interact_template','interact_template']
+const lotteryResultFunPrefixArr = ['','','','','','','','','','','','','','interact_template','interact_template']
 let merge = {}
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
@@ -74,7 +73,7 @@ function QueryJDUserInfo(timeout = 0) {
             merge.enabled = false
             return
           }
-          merge.nickname = data.base.nickname;
+          //merge.nickname = data.base.nickname;
         } catch (e) {
           $.logErr(e, resp);
         } finally {
