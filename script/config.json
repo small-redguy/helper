@@ -84,16 +84,6 @@
 	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_moneyTree.js",
 	"name": "京东摇钱树"
 }, {
-	"id": "jd_z_xmf_xcl",
-	"cron": "0 10 10 7-9 4 * *",
-	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/z_xmf.js",
-	"name": "小魔方"
-}, {
-	"id": "jd_mohe_xcl",
-	"cron": "0 0 0,1-23/3 * * * *",
-	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_mohe.js",
-	"name": "5G超级盲盒"
-}, {
 	"id": "jd_syj_xcl",
 	"cron": "0 10 7,12 * * * *",
 	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_syj.js",
@@ -105,8 +95,8 @@
 	"name": "京东全民开红包"
 }, {
 	"id": "jd_nzmh_xcl",
-	"cron": "0 0 8 * 4 * *",
-	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_nzmh.js",
+	"cron": "0 0 8 * * * *",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/yuannian1112/jd_scripts/main/jd_nzmh.js",
 	"name": "女装盲盒"
 }, {
 	"id": "monk_pasture_xcl",
@@ -154,13 +144,7 @@
 	"describe":"一键签到系列，每天运行一次，默认定时0点20分执行",
 	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_bean_sign.js",
 	"name": "京东一键签到"
-}, {
-	"id": "jd_necklace_xcl",
-	"cron": "0 10 0,20 * * * *",
-	"describe":"点点券，可以兑换无门槛红包（1元，5元，10元，100元，部分红包需抢购）",
-	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_necklace.js",
-	"name": "点点券"
-}, {
+},{
 	"id": "jd_price_xcl",
 	"cron": "0 5 0 * * * *",
 	"describe":"60天内的订单进行保价",
@@ -170,7 +154,7 @@
 	"id": "jd_plantBean_xcl",
 	"cron": "0 1 7-21/2 * * * *",
 	"describe":"会自动关注任务中的店铺跟商品，介意者勿使用",
-	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_plantBean.js",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/yuannian1112/jd_scripts/main/jd_plantBean.js",
 	"name": "种豆得豆"
 },{
 	"id": "jd_cash_exchange_xcl",
@@ -216,12 +200,6 @@
 	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/z_mother_jump.js",
 	"name": "母婴跳一跳"
 },{
-	"id": "jd_joy_reward_xcl",
-	"cron": "55 59 23,7,15 * * * *",
-	"describe":"宠汪汪兑京豆",
-	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_joy_reward.js",
-	"name": "宠汪汪兑京豆"
-},{
 	"id": "jd_fruit_xcl",
 	"cron": "0 5 6-18/6 * * * *",
 	"describe":"一天只能帮助4个人。多出的助力码无效",
@@ -239,13 +217,8 @@
 	"describe":"京东排行榜",
 	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_rankingList.js",
 	"name": "京东排行榜"
-},{
-	"id": "jd_shop_follow_xcl",
-	"cron": "0 0 12 * * * *",
-	"describe":"店铺关注有礼，需要pc端ck才能使用",
-	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_shop_follow.js",
-	"name": "店铺关注"
-},{
+},
+{
 	"id": "jd_unsubscribe_xcl",
 	"cron": "0 0 8 * * * *",
 	"describe":"店铺批量取消关注，建议定时在试用之前",
@@ -276,9 +249,93 @@
 	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_super_redrain.js",
 	"name": "整点京豆雨"
 },{
-	"id": "jd_tcl_xcl",
-	"cron": "0 10 1 * * * *",
-	"describe":"球队赢好礼,默认：不加购物车，不注册店铺会员卡。",
-	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_tcl.js",
-	"name": "球队赢好礼"
+	"id": "jd_jin_tie_xcl",
+	"cron": "0 10 0 * * * *",
+	"describe":"领金贴(只做签到以及互助任务里面的部分任务)",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_jin_tie.js",
+	"name": "领金贴"
+},{
+	"id": "jd_half_rain",
+	"cron": "0 0,1,30,31 16-23/1 * * * *",
+	"isConcurrent":true,
+	"describe":"京东半点红包雨",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_half_rain.js",
+	"name": "半点红包雨"
+},{
+	"id": "jd_bean_home",
+	"cron": "0 10 7 * * * *",
+	"isConcurrent":false,
+	"describe":"活动入口：京东APP首页-领京豆",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_bean_home.js",
+	"name": "领京豆额外奖励"
+},{
+	"id": "jd_ddopk",
+	"cron": "0 10 7 * * * *",
+	"isConcurrent":true,
+	"describe":"京享值PK",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_ddopk.js",
+	"name": "京享值PK"
+},{
+	"id": "jd_gold_creator",
+	"isConcurrent":true,
+	  "cron": "0 13 1,22 * * * *",
+	"describe":"活动入口：https://h5.m.jd.com/babelDiy/Zeus/2H5Ng86mUJLXToEo57qWkJkjFPxw/index.html",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_gold_creator.js",
+	"name": "金榜创造营"
+},{
+	"id": "jd_jsffl",
+	"isConcurrent":true,
+	  "cron": "0 0 * * * * *",
+	"describe":"京东极速版-我的-省钱大赢家-翻翻乐",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_jsffl.js",
+	"name": "极速版翻翻乐"
+},{
+	"id": "jd_mcxhd_brandcity",
+	"isConcurrent":true,
+	  "cron": "0 30 9,10 1-18 6 * *",
+	"describe":"新潮品牌狂欢",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_mcxhd_brandcity.js",
+	"name": "新潮品牌狂欢"
+},{
+	"id": "jx_mc",
+	"isConcurrent":true,
+	  "cron": "0 0 * * * * *",
+	"describe":"京喜App -> 我的 -> 京喜牧场，先将新手任务做完，再执行本脚本，不然会出现未知错误",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jx_mc.js",
+	"name": "京喜牧场"
+},{
+	"id": "jd_lsj",
+	"isConcurrent":false,
+	  "cron": "0 0 11 * * * *",
+	"describe":"入口 京东 频道 美食馆",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_lsj.js",
+	"name": "零食街"
+},{
+	"id": "gua_MMdou",
+	"isConcurrent":false,
+	  "cron": "0 10 0 * * * *",
+	"describe":"入口：首页-领京豆-升级赚京豆",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/gua_MMdou.js",
+	"name": "升级领京豆"
+},{
+	"id": "jd_ryhxj",
+	"isConcurrent":false,
+	  "cron": "0 10 0-18/6 * * * *",
+	"describe":"荣耀焕新季",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/yuannian1112/jd_scripts/main/jd_ryhxj.js",
+	"name": "荣耀焕新季"
+},{
+	"id": "jd_carnivalcity",
+	"isConcurrent":false,
+	  "cron": "0 50 0,4 * * * *",
+	"describe":"手机狂欢城",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/yuannian1112/jd_scripts/main/jd_carnivalcity.js",
+	"name": "手机狂欢城"
+},{
+	"id": "jd_mohe",
+	"isConcurrent":false,
+	  "cron": "0 20 0,1-23/3 * * * *",
+	"describe":"5G超级盲盒，可抽奖获得京豆，建议在凌晨0点时运行脚本，白天抽奖基本没有京豆，4小时运行一次收集热力值",
+	"url": "https://ghproxy.com/https://raw.githubusercontent.com/small-redguy/helper/main/jdresource/jd_mohe.js",
+	"name": "5G盲盒"
 }]
