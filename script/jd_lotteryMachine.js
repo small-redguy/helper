@@ -1,8 +1,8 @@
 const STRSPLIT = "|";
 const needSum = false;            //是否需要显示汇总
 const printDetail = false;        //是否显示出参详情
-const appIdArr = ['1EFRRxA','1EFRQwA','1E1NYwqc','1EFRXxg','1EFVRxg','1E1NYw6w']
-//const shareCodeArr = ['T0225KkcRx4b8lbWJU72wvZZcwCjVWmIaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVXnIaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCTJfnqS7zDcjeQOc','T0225KkcRx4b8lbWJU72wvZZcwCjVQmoaT5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjRXnYaU5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCTJfn6-7zDQjeQOc']
+const appIdArr =   ['1EFRRxA','1EFRQwA','1EFRXxg','1EFVRxg','1E1xVyqw']
+//const shareCodeArr = ['T0225KkcRx4b8lbWJU72wvZZcwCjVWmIaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVXnIaW5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVQmoaT5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCjVQmoaT5kRrbA','T0225KkcRx4b8lbWJU72wvZZcwCT1Slq-7yx55awQ','T0225KkcRx4b8lbWJU72wvZZcwCTJfn6-7zDQjeQOc']
 const homeDataFunPrefixArr = ['interact_template','interact_template','harmony_template','','','','','','','','','','interact_template','interact_template']
 const collectScoreFunPrefixArr = ['','','','','','','','','','','','','interact_template','interact_template']
 const lotteryResultFunPrefixArr = ['','','','','','','','','','','','','','interact_template','interact_template']
@@ -124,7 +124,7 @@ function interact_template_getHomeData(timeout = 0) {
               await interact_template_getLotteryResult(data.data.result.taskVos[i].taskId);
               continue;
             }
-            if ([0,13].includes(data.data.result.taskVos[i].taskType)) {
+            if ([0,13,12].includes(data.data.result.taskVos[i].taskType)) {
               if (data.data.result.taskVos[i].status === 1) {
                 await harmony_collectScore(data.data.result.taskVos[i].simpleRecordInfoVo.taskToken,data.data.result.taskVos[i].taskId);
               }
