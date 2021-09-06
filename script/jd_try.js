@@ -139,7 +139,7 @@ let args_xh = {
         console.log(`\n您未设置运行【京东试用】脚本，结束运行！\n`)
     }
 })().catch((e) => {
-    console.error(`❗️ ${$.name} 运行错误！\n${e}`)
+    console.log(`❗️ ${$.name} 运行错误！\n${e}`)
 }).finally(() => $.done())
 
 function requireConfig(){
@@ -352,7 +352,7 @@ function try_MyTrials(page, selected){
                         //     }
                         // }
                     } else {
-                        console.error(`ERROR:try_MyTrials`)
+                        console.log(`ERROR:try_MyTrials`)
                     }
                 }
             } catch(e){
