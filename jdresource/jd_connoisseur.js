@@ -7,14 +7,11 @@
 [task_local]
 #内容鉴赏官
 15 3,6 * * * https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_connoisseur.js, tag=内容鉴赏官, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
-
 ================Loon==============
 [Script]
 cron "15 3,6 * * *" script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_connoisseur.js,tag=内容鉴赏官
-
 ===============Surge=================
 内容鉴赏官 = type=cron,cronexp="15 3,6 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_connoisseur.js
-
 ============小火箭=========
 内容鉴赏官 = type=cron,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_connoisseur.js, cronexpr="15 3,6 * * *", timeout=3600, enable=true
  */
@@ -43,6 +40,12 @@ let allMessage = '';
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
     return;
   }
+//   let res = await getAuthorShareCode('https://raw.githubusercontent.com/Aaron-lv/updateTeam/master/shareCodes/connoisseur.json')
+//   if (!res) {
+//     $.http.get({url: 'https://purge.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/connoisseur.json'}).then((resp) => {}).catch((e) => console.log('刷新CDN异常', e));
+//     await $.wait(1000)
+//     res = await getAuthorShareCode('https://cdn.jsdelivr.net/gh/Aaron-lv/updateTeam@master/shareCodes/connoisseur.json')
+//   }
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
       cookie = cookiesArr[i];
@@ -65,7 +68,12 @@ let allMessage = '';
       await jdConnoisseur()
     }
   }
-  $.shareCodes = [...$.shareCodes]
+//   let res2 = await getAuthorShareCode('https://raw.githubusercontent.com/zero205/updateTeam/main/shareCodes/connoisseur.json')
+//   if (!res2) {
+//     await $.wait(1000)
+//     res2 = await getAuthorShareCode('https://raw.fastgit.org/zero205/updateTeam/main/shareCodes/connoisseur.json')
+//   }
+//   $.shareCodes = [...$.shareCodes, ...(res || []), ...(res2 || [])]
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
       cookie = cookiesArr[i];
@@ -81,7 +89,7 @@ let allMessage = '';
             continue
           }
           $.delcode = false
-          await getTaskInfo("2", $.projectCode, $.taskCode, "22", "2", $.shareCodes[j].code)
+          await getTaskInfo("2", $.projectCode, $.taskCode, $.helpType, "2", $.shareCodes[j].code)
           await $.wait(2000)
           if ($.delcode) {
             $.shareCodes.splice(j, 1)
@@ -161,7 +169,7 @@ async function getActiveInfo(url = 'https://prodev.m.jd.com/mall/active/2y1S9xVY
 }
 async function getTaskInfo(type, projectId, assignmentId, ofn, helpType = '1', itemId = '') {
   let body = {"type":type,"projectId":projectId,"assignmentId":assignmentId,"doneHide":false}
-  if (ofn === "22") body['itemId'] = itemId; body['helpType'] = helpType
+  if (ofn === $.helpType) body['itemId'] = itemId; body['helpType'] = helpType
   return new Promise(async resolve => {
     $.post(taskUrl('interactive_info', body), async (err, resp, data) => {
       try {
@@ -171,7 +179,7 @@ async function getTaskInfo(type, projectId, assignmentId, ofn, helpType = '1', i
         } else {
           if (data) {
             data = JSON.parse(data)
-            if (ofn === "3" || ofn === "10" || ofn === "14" || ofn === "16" || ofn === "18") {
+            if (ofn === "3" || ofn === "10" || ofn === "14" || ofn === "16" || ofn === "18" || ofn === "20") {
               if (ofn !== "3") console.log(`去做【${data.data[0].title}】`)
               if (data.code === "0" && data.data) {
                 if (data.data[0].status !== "2") {
@@ -208,7 +216,7 @@ async function getTaskInfo(type, projectId, assignmentId, ofn, helpType = '1', i
               } else {
                 console.log(data.message)
               }
-            } else if (ofn === "22") {
+            } else if (ofn === $.helpType) {
               if (helpType === '1') {
                 if (data.code === "0" && data.data) {
                   if (data.data[0].status !== "2") {
@@ -411,13 +419,16 @@ async function getshareCode() {
             data = JSON.parse(data)
             for (let key of Object.keys(data.floorList)) {
               let vo = data.floorList[key]
-              if (vo.ofn && vo.ofn === "22") {
+              if (vo.ofn && ((vo.ofn === "16" || vo.ofn === "18" || vo.ofn === "20") && vo.template === 'customcode')) {
+                await getTaskInfo("1", vo.boardParams.projectCode, vo.boardParams.taskCode, vo.ofn)
+                await $.wait(2000)
+              } else if (vo.ofn && ((vo.ofn === "22" || vo.ofn === "24") && vo.template === 'customcode')) {
                 $.projectCode = vo.boardParams.projectCode
                 $.taskCode = vo.boardParams.taskCode
-                break
+                $.helpType = vo.ofn
               }
             }
-            await getTaskInfo("2", $.projectCode, $.taskCode, "22")
+            await getTaskInfo("2", $.projectCode, $.taskCode, $.helpType)
           }
         }
       } catch (e) {
