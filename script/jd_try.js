@@ -23,28 +23,15 @@ const URL = 'https://api.m.jd.com/client.action'
 let trialActivityIdList = []
 let trialActivityTitleList = []
 let notifyMsg = ''
-try{
-let process={
-    env:{
-        "JD_TRY":"true"
-    }
-}
-}catch(e){
- process={
-    env:{
-        "JD_TRY":"true"
-    }
-}
-}
 // default params
 let args_xh = {
     /*
      * 是否进行通知
      * 可设置环境变量：JD_TRY_NOTIFY
      * */
-//     isNotify: process.env.JD_TRY_NOTIFY || true,
+//     isNotify: true,
     // 商品原价，低于这个价格都不会试用
-    jdPrice: process.env.JD_TRY_PRICE || 0,
+    jdPrice:  0,
     /*
      * 获取试用商品类型，默认为1
      * 1 - 精选
@@ -55,13 +42,13 @@ let args_xh = {
      * 可设置环境变量：JD_TRY_TABID
      * */
     // TODO: tab ids as array(support multi tabIds)
-    // tabId: process.env.JD_TRY_TABID && process.env.JD_TRY_TABID.split('@').map(Number) || [1],
-    tabId: process.env.JD_TRY_TABID || 1,
+    // tabId:  [1],
+    tabId:  1,
     /*
      * 试用商品标题过滤
      * 可设置环境变量：JD_TRY_TITLEFILTERS，关键词与关键词之间用@分隔
      * */
-    titleFilters: process.env.JD_TRY_TITLEFILTERS && process.env.JD_TRY_TITLEFILTERS.split('@') || ["幼儿园", "教程", "英语", "辅导", "培训", "孩子", "小学"],
+    titleFilters: ["幼儿园", "教程", "英语", "辅导", "培训", "孩子", "小学"],
     // 试用价格(中了要花多少钱)，高于这个价格都不会试用，小于等于才会试用
     trialPrice: 10,
     /*
@@ -69,17 +56,17 @@ let args_xh = {
      * 若只提供5分试用资格，当前设置为10，则不会申请
      * 可设置环境变量：JD_TRY_MINSUPPLYNUM
      * */
-    minSupplyNum: process.env.JD_TRY_MINSUPPLYNUM || 1,
+    minSupplyNum:  1,
     /*
      * 过滤大于设定值的已申请人数，例如下面设置的1000，A商品已经有1001人申请了，则A商品不会进行申请，会被跳过
      * 可设置环境变量：JD_TRY_APPLYNUMFILTER
      * */
-    applyNumFilter: process.env.JD_TRY_APPLYNUMFILTER || 99999,
+    applyNumFilter: 99999,
     /*
      * 商品试用之间和获取商品之间的间隔, 单位：毫秒(1秒=1000毫秒)
      * 可设置环境变量：JD_TRY_APPLYINTERVAL
      * */
-    applyInterval: process.env.JD_TRY_APPLYINTERVAL || 5000,
+    applyInterval:5000,
     /*
      * 商品数组的最大长度，通俗来说就是即将申请的商品队列长度
      * 例如设置为20，当第一次获取后获得12件，过滤后剩下5件，将会进行第二次获取，过滤后加上第一次剩余件数
@@ -92,7 +79,7 @@ let args_xh = {
 !(async() => {
     console.log(`\n本脚本默认不运行，也不建议运行\n如需运行请自行添加环境变量：JD_TRY，值填：true\n`)
     await $.wait(1000)
-    if(process.env.JD_TRY && process.env.JD_TRY === 'true'){
+    if(true){
         await requireConfig()
         if(!$.cookiesArr[0]){
             $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', {
