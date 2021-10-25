@@ -23,10 +23,18 @@ const URL = 'https://api.m.jd.com/client.action'
 let trialActivityIdList = []
 let trialActivityTitleList = []
 let notifyMsg = ''
+try{
 let process={
     env:{
         "JD_TRY":"true"
     }
+}
+}catch(e){
+ process={
+    env:{
+        "JD_TRY":"true"
+    }
+}
 }
 // default params
 let args_xh = {
