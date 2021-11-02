@@ -1,6 +1,6 @@
 /*
 东东水果:脚本更新地址 jd_fruit.js
-更新时间：2021-5-18
+更新时间：2021-11-02
 活动入口：京东APP我的-更多工具-东东农场
 东东农场活动链接：https://h5.m.jd.com/babelDiy/Zeus/3KSjXqQabiTuD1cJ28QskrpWoBKT/index.html
 已支持IOS双京东账号,Node.js支持N个京东账号
@@ -33,6 +33,8 @@ let cookiesArr = [], cookie = '', jdFruitShareArr = [], isBox = false, notify, n
 //下面给出两个账号的填写示例（iOS只支持2个京东账号）
 let shareCodes = [ 
 ]
+
+//目前改成先号内互助  有多余次数互助池子
 let message = '', subTitle = '', option = {}, isFruitFinished = false;
 const retainWater = 100;//保留水滴大于多少g,默认100g;
 let jdNotify = false;//是否关闭通知，false打开通知推送，true关闭通知推送
@@ -70,6 +72,27 @@ const urlSchema = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%2
       await jdFruit();
     }
   }
+  for (let i = 0; i < cookiesArr.length; i++) {
+    if (cookiesArr[i]) {
+      cookie = cookiesArr[i];
+      $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
+      $.index = i + 1;
+      $.isLogin = true;
+      $.nickName = '';
+      await TotalBean();
+      console.log(`\n开始【京东账号${$.index}】${$.nickName || $.UserName}\n`);
+      if (!$.isLogin) {
+        $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
+
+        if ($.isNode()) {
+          await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `京东账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
+        }
+        continue
+      }
+      await masterHelpShare();//助力好友
+      //互助 账号内部互助
+    }
+  }
   if ($.isNode() && allMessage && $.ctrTemp) {
     await notify.sendNotify(`${$.name}`, `${allMessage}`)
   }
@@ -89,8 +112,10 @@ async function jdFruit() {
       message = `【水果名称】${$.farmInfo.farmUserPro.name}\n`;
       console.log(`\n【京东账号${$.index}（${$.UserName}）的${$.name}好友互助码】${$.farmInfo.farmUserPro.shareCode}\n`);
       console.log(`\n【已成功兑换水果】${$.farmInfo.farmUserPro.winTimes}次\n`);
+      newShareCodes.push($.farmInfo.farmUserPro.shareCode);
+      await setHelp();
       message += `【已兑换水果】${$.farmInfo.farmUserPro.winTimes}次\n`;
-      await masterHelpShare();//助力好友
+      //await masterHelpShare();//助力好友
       if ($.farmInfo.treeState === 2 || $.farmInfo.treeState === 3) {
         option['open-url'] = urlSchema;
         $.msg($.name, ``, `【京东账号${$.index}】${$.nickName || $.UserName}\n【提醒⏰】${$.farmInfo.farmUserPro.name}已可领取\n请去京东APP或微信小程序查看\n点击弹窗即达`, option);
@@ -663,8 +688,6 @@ async function masterHelpShare() {
       console.log(`助力失败::${JSON.stringify($.helpResult)}`);
     }
   }
-  
-  await setHelp();
 //   if ($.isLoon() || $.isQuanX() || $.isSurge()) {
 //     let helpSuccessPeoplesKey = timeFormat() + $.farmInfo.farmUserPro.shareCode;
 //     if (!$.getdata(helpSuccessPeoplesKey)) {
@@ -694,7 +717,7 @@ async function masterHelpShare() {
 
 
 function getHelp() {
-		newShareCodes = [];
+		//newShareCodes = [];
 		return new Promise(resolve => {
 			$.get({
 				url: "http://api.tyh52.com/act/get/jd_fruit/3"
