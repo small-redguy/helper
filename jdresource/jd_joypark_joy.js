@@ -24,11 +24,6 @@ cron "20 0-23/3 * * *" script-path=jd_joypark_joy.js,tag=汪汪乐园养joy
 汪汪乐园养joy = type=cron,script-path=jd_joypark_joy.js, cronexpr="20 0-23/3 * * *", timeout=3600, enable=true
 */
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-let process={
-    env:{
-        "JD_JOY_PARK":"true"
-    }
-}
 const notify = $.isNode() ? require('./sendNotify') : '';
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [],
@@ -53,10 +48,6 @@ message = ""
     $.msg($.name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', {
       "open-url": "https://bean.m.jd.com/"
     });
-    return;
-  }
-  if (process.env.JD_JOY_PARK && process.env.JD_JOY_PARK === 'false') {
-    console.log(`\n******检测到您设置了不运行汪汪乐园，停止运行此脚本******\n`)
     return;
   }
   for (let i = 0; i < cookiesArr.length; i++) {
