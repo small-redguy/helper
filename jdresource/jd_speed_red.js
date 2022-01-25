@@ -15,7 +15,7 @@ if ($.isNode()) {
 }
 
 $.linkId="";
-$.linkIds=["9wdf1YTT2L59Vr-meKskLA","7ya6o83WSbNhrbYJqsMfFA"];
+$.linkIds=["7ya6o83WSbNhrbYJqsMfFA","Eu7-E0CUzqYyhZJo9d3YkQ"];
 !(async () => {
     
     if (!cookiesArr[0]) {
