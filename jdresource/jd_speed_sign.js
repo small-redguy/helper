@@ -796,7 +796,7 @@ function taskGetUrl(function_id, body) {
 
 function invite2() {
   let inviterId = [
-    "GaYxmFpHAG+JLi7W28KWYw==","CB9CnvHC9UzwVe+3jtpzpg=="
+    "GaYxmFpHAG+JLi7W28KWYw==","CB9CnvHC9UzwVe+3jtpzpg==","rCyZxjoBq0w8kA+plfSunQ=="
   ][Math.floor((Math.random() * 2))]
   let headers = {
     'Host': 'api.m.jd.com',
@@ -824,7 +824,7 @@ function invite2() {
 function invite() {
   let t = +new Date()
   let inviterId = [
-    "GaYxmFpHAG+JLi7W28KWYw==","CB9CnvHC9UzwVe+3jtpzpg=="
+    "GaYxmFpHAG+JLi7W28KWYw==","CB9CnvHC9UzwVe+3jtpzpg==","rCyZxjoBq0w8kA+plfSunQ=="
   ][Math.floor((Math.random() * 6))]
   var headers = {
     'Host': 'api.m.jd.com',
